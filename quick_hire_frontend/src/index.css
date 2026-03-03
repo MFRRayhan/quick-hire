@@ -1,0 +1,36 @@
+@import url("https://fonts.googleapis.com/css2?family=Epilogue:ital,wght@0,100..900;1,100..900&family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap");
+
+@font-face {
+  font-family: "ClashDisplay-Semibold";
+  src: url("/fonts/ClashDisplay-Semibold.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@import "tailwindcss";
+@plugin "daisyui";
+
+.container {
+  @apply mx-auto;
+}
+
+body {
+  font-family: "Epilogue", sans-serif;
+  color: #515b6f;
+}
+.logo {
+  font-family: "Red Hat Display", sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "ClashDisplay-Semibold", sans-serif;
+  color: #25324b;
+}
+
+input:focus {
+  outline: none;
+}

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "job_001",
+    "companyName": "Revolut",
+    "companyLogo": "https://dummyimage.com/64x64/000/fff&text=R",
+    "jobTitle": "Email Marketing",
+    "employmentType": "Full Time",
+    "location": "Madrid, Spain",
+    "description": "Revolut is looking for Email Marketing to help team ma ...",
+    "tags": ["marketing", "design"]
+  },
+  {
+    "id": "job_002",
+    "companyName": "Monzo",
+    "companyLogo": "https://dummyimage.com/64x64/000/fff&text=M",
+    "jobTitle": "Customer Success Lead",
+    "employmentType": "Full Time",
+    "location": "London, UK",
+    "description": "Monzo is seeking a lead for our customer success operations in London...",
+    "tags": ["support", "management"]
+  },
+  {
+    "id": "job_003",
+    "companyName": "Stripe",
+    "companyLogo": "https://dummyimage.com/64x64/000/fff&text=S",
+    "jobTitle": "Growth Marketer",
+    "employmentType": "Full Time",
+    "location": "Dublin, Ireland",
+    "description": "Join Stripe to scale our user base through innovative marketing strategies...",
+    "tags": ["marketing", "growth"]
+  },
+  {
+    "id": "job_004",
+    "companyName": "Airbnb",
+    "companyLogo": "https://dummyimage.com/64x64/000/fff&text=A",
+    "jobTitle": "Support Specialist",
+    "employmentType": "Contract",
+    "location": "Remote",
+    "description": "Help our community of hosts and guests solve complex booking issues...",
+    "tags": ["support", "remote"]
+  },
+  {
+    "id": "job_005",
+    "companyName": "Figma",
+    "companyLogo": "https://dummyimage.com/64x64/000/fff&text=F",
+    "jobTitle": "Product Designer",
+    "employmentType": "Full Time",
+    "location": "San Francisco, USA",
+    "description": "Define the future of design tools by joining our core product team...",
+    "tags": ["design", "product"]
+  },
+  {
+    "id": "job_006",
+    "companyName": "Spotify",
+    "companyLogo": "https://dummyimage.com/64x64/000/fff&text=S",
+    "jobTitle": "Content Strategist",
+    "employmentType": "Full Time",
+    "location": "Stockholm, Sweden",
+    "description": "Spotify is looking for a strategist to manage our global content engine...",
+    "tags": ["marketing", "content"]
+  },
+  {
+    "id": "job_007",
+    "companyName": "Intercom",
+    "companyLogo": "https://dummyimage.com/64x64/000/fff&text=I",
+    "jobTitle": "Technical Support Engineer",
+    "employmentType": "Full Time",
+    "location": "Dublin, Ireland",
+    "description": "Bridge the gap between our customers and our engineering team...",
+    "tags": ["support", "engineering"]
+  },
+  {
+    "id": "job_008",
+    "companyName": "Notion",
+    "companyLogo": "https://dummyimage.com/64x64/000/fff&text=N",
+    "jobTitle": "Brand Designer",
+    "employmentType": "Full Time",
+    "location": "New York, USA",
+    "description": "Craft the visual identity of the world's most versatile workspace...",
+    "tags": ["design", "branding"]
+  },
+  {
+    "id": "job_009",
+    "companyName": "Slack",
+    "companyLogo": "https://dummyimage.com/64x64/000/fff&text=S",
+    "jobTitle": "Marketing Analyst",
+    "employmentType": "Part Time",
+    "location": "Toronto, Canada",
+    "description": "Analyze campaign performance and provide actionable insights to the team...",
+    "tags": ["marketing", "analytics"]
+  },
+  {
+    "id": "job_010",
+    "companyName": "Wise",
+    "companyLogo": "https://dummyimage.com/64x64/000/fff&text=W",
+    "jobTitle": "Operations Specialist",
+    "employmentType": "Full Time",
+    "location": "Tallinn, Estonia",
+    "description": "Optimize our money transfer operations for millions of customers...",
+    "tags": ["support", "operations"]
+  },
+  {
+    "id": "job_011",
+    "companyName": "Canva",
+    "companyLogo": "https://dummyimage.com/64x64/000/fff&text=C",
+    "jobTitle": "UX Designer",
+    "employmentType": "Full Time",
+    "location": "Sydney, Australia",
+    "description": "Make complex design tasks simple and accessible for everyone...",
+    "tags": ["design", "ux"]
+  },
+  {
+    "id": "job_012",
+    "companyName": "Klarna",
+    "companyLogo": "https://dummyimage.com/64x64/000/fff&text=K",
+    "jobTitle": "Lifecycle Marketer",
+    "employmentType": "Full Time",
+    "location": "Berlin, Germany",
+    "description": "Design customer journeys that drive engagement and loyalty...",
+    "tags": ["marketing", "lifecycle"]
+  }
+]
