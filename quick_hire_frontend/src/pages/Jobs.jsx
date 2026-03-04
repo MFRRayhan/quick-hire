@@ -18,7 +18,9 @@ export default function Jobs() {
       if (category !== "All Categories") params.append("category", category);
       if (location !== "All Locations") params.append("location", location);
 
-      const res = await fetch(`/api/jobs?${params.toString()}`);
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL || ""}/api/jobs?${params.toString()}`,
+      );
       if (res.ok) {
         const data = await res.json();
         setJobs(data);

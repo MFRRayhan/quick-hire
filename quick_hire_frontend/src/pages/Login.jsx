@@ -41,7 +41,7 @@ export default function Login() {
         await updateUser(result.user, { displayName: demoName });
 
         const userInfo = { email: demoEmail, name: demoName };
-        await fetch("/api/users", {
+        await fetch(`${import.meta.env.VITE_API_URL || ""}/api/users`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(userInfo),
@@ -66,7 +66,7 @@ export default function Login() {
           email: result.user?.email,
           name: result.user?.displayName,
         };
-        fetch("/api/users", {
+        fetch(`${import.meta.env.VITE_API_URL || ""}/api/users`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(userInfo),

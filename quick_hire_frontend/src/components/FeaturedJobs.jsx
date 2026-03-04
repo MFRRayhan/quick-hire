@@ -6,7 +6,7 @@ export default function FeaturedJobs() {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
-    fetch("/api/jobs")
+    fetch(`${import.meta.env.VITE_API_URL || ""}/api/jobs`)
       .then((res) => res.json())
       .then((data) => {
         setJobs(data.slice(0, 4));

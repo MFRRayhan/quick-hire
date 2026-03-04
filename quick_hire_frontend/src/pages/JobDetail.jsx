@@ -19,7 +19,9 @@ export default function JobDetail() {
 
   const fetchJobDetails = async () => {
     try {
-      const res = await fetch(`/api/jobs/${id}`);
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL || ""}/api/jobs/${id}`,
+      );
       if (res.ok) {
         const data = await res.json();
         setJob(data);
@@ -39,19 +41,22 @@ export default function JobDetail() {
     e.preventDefault();
 
     try {
-      const res = await fetch("/api/applications", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL || ""}/api/applications`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify({
+            jobId: id,
+            name,
+            email,
+            resume_link: resumeLink,
+            cover_note: coverNote,
+          }),
         },
-        body: JSON.stringify({
-          jobId: id,
-          name,
-          email,
-          resume_link: resumeLink,
-          cover_note: coverNote,
-        }),
-      });
+      );
 
       const data = await res.json();
       if (res.ok) {

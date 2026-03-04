@@ -26,7 +26,7 @@ export default function SignUp() {
           photoURL: photoURL,
         }).then(() => {
           const userInfo = { email: email, name: name };
-          fetch("/api/users", {
+          fetch(`${import.meta.env.VITE_API_URL || ""}/api/users`, {
             method: "PUT",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify(userInfo),
@@ -49,7 +49,7 @@ export default function SignUp() {
           email: result.user?.email,
           name: result.user?.displayName,
         };
-        fetch("/api/users", {
+        fetch(`${import.meta.env.VITE_API_URL || ""}/api/users`, {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(userInfo),

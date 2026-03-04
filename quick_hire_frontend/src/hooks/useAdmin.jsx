@@ -8,7 +8,9 @@ const useAdmin = () => {
 
   useEffect(() => {
     if (user?.email && !loading) {
-      fetch(`/api/users/admin/${user.email}`)
+      fetch(
+        `${import.meta.env.VITE_API_URL || ""}/api/users/admin/${user.email}`,
+      )
         .then((res) => res.json())
         .then((data) => {
           setIsAdmin(data.admin);
@@ -19,7 +21,7 @@ const useAdmin = () => {
           setIsAdminLoading(false);
         });
     } else if (!loading) {
-        setIsAdminLoading(false);
+      setIsAdminLoading(false);
     }
   }, [user, loading]);
 

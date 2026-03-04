@@ -12,38 +12,41 @@ export default function Admin() {
   const [employmentType, setEmploymentType] = useState("Full-Time");
   const [description, setDescription] = useState("");
 
-  useEffect(() => {
-    fetchJobs();
-  }, []);
-
   const fetchJobs = async () => {
     try {
-      const res = await fetch("/api/jobs");
+      const res = await fetch(`${import.meta.env.VITE_API_URL || ""}/api/jobs`);
       if (res.ok) {
         const data = await res.json();
         setJobs(data);
       }
-    } catch (error) {
-      console.error("Error fetching jobs:", error);
+    } catch (fetchError) {
+      console.error("Error fetching jobs:", fetchError);
     }
   };
+
+  useEffect(() => {
+    fetchJobs();
+  }, []);
 
   const handleCreateJob = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("/api/jobs", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          title,
-          company,
-          companyLogo: logoUrl,
-          location,
-          category,
-          employmentType,
-          description,
-        }),
-      });
+      const res = await fetch(
+        `${import.meta.env.VITE_API_URL || ""}/api/jobs`,
+        {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            title,
+            company,
+            companyLogo: logoUrl,
+            location,
+            category,
+            employmentType,
+            description,
+          }),
+        },
+      );
       const data = await res.json();
       if (res.ok) {
         Swal.fire("Success", "Job created successfully", "success");
@@ -57,7 +60,7 @@ export default function Admin() {
       } else {
         Swal.fire("Error", data.message || "Failed to create job", "error");
       }
-    } catch (error) {
+    } catch (createError) {
       Swal.fire("Error", "Something went wrong", "error");
     }
   };
@@ -75,14 +78,17 @@ export default function Admin() {
 
     if (confirm.isConfirmed) {
       try {
-        const res = await fetch(`/api/jobs/${id}`, { method: "DELETE" });
+        const res = await fetch(
+          `${import.meta.env.VITE_API_URL || ""}/api/jobs/${id}`,
+          { method: "DELETE" },
+        );
         if (res.ok) {
           Swal.fire("Deleted!", "Job has been deleted.", "success");
           fetchJobs();
         } else {
           Swal.fire("Error", "Failed to delete job", "error");
         }
-      } catch (error) {
+      } catch (deleteError) {
         Swal.fire("Error", "Something went wrong", "error");
       }
     }
