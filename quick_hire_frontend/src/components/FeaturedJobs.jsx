@@ -67,7 +67,7 @@ export default function FeaturedJobs() {
                   </span>
                 </div>
 
-                <div className="flex-grow">
+                <div className="grow">
                   <h3 className="font-bold text-xl text-[#1E293B] mb-2 hover:text-blue-600 transition-colors">
                     {title}
                   </h3>
